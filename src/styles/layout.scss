@@ -1,0 +1,52 @@
+.section {
+  margin: 0 auto;
+  max-width: 460px;
+  padding: 0 15px;
+  width: 100%;
+}
+
+
+.page-wrapper {
+    padding: 1rem;
+  }
+  
+  .header {
+    background-color: var(--primary-color)!important;
+    color: #fff !important;
+    padding: 0.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row !important;
+    button {
+      width: min-content;
+      color: #fff !important;
+    }
+  }
+  
+
+.breadcrumbs{
+
+  color: var(--accent-color)!important;
+  text-decoration: none!important;
+  padding: 0.5rem;
+  a{
+    color: var(--accent-color)!important;
+    text-decoration: none!important;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  .MuiTypography-root{
+    color: var(--accent-color)!important;
+    text-transform: capitalize;
+  }
+  
+}
+
+.centered-element{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}

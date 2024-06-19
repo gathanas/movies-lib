@@ -1,0 +1,18 @@
+//mixins for media queries desktop
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+//mixins for media queries tablet
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+//mixins for border-radius 5px
+@mixin border-radius {
+  border-radius: 5px;
+}

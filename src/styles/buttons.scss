@@ -1,0 +1,11 @@
+.movies-app-button {
+  width: 100%;
+  padding: 0.7rem!important;
+  @include border-radius;
+
+  @include tablet {
+    width: auto;
+    height:"47px",
+  }
+
+}

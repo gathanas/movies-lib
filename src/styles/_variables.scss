@@ -1,0 +1,25 @@
+:root {
+    --background-color: #202020;
+    --primary-color: #E50914;
+    --primary-color-light: #FF3D3D;
+    --primary-color-dark: #B80000;
+    --secondary-color: #FFFFFF;
+    --accent-color: #70D6FF;
+
+    --input-background: #666;
+    --label-color:var(--accent-color);
+}
+
+
+body {
+    background-color: var(--background-color)!important;
+    color: var(--secondary-color)!important;
+}
+
+h1 {
+    color: var(--secondary-color)!important;
+}
+
+a {
+    color: var(--accent-color)!important;
+}

@@ -1,0 +1,9 @@
+.form-free-text--input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .MuiFormControl-root{
+        background-color: var(--input-background);
+    }
+}

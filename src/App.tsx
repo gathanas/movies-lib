@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.scss";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import NotFoundScreen from "./components/screens/NotFoundScreen";
+import Header from "./components/layout/Header";
+import NewMovieScreen from "./components/screens/NewMovieScreen";
+import MoviesList from "./components/screens/MoviesListScreen";
+import SettingsProvider from "./components/wrappers/SettingsProvider";
+import MovieDetailsScreen from "./components/screens/MovieDetailsScreen";
+import BreadcrumpsNavigation from "./components/layout/BreadcrumpsNavigation";
+import EditMovieScreen from "./components/screens/EditMovieScreen";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <SettingsProvider>
+      <BrowserRouter>
+        <Header />
+        <BreadcrumpsNavigation/>
+        <Routes>
+          <Route path="/" element={<Navigate to="/movies" />} />
+          <Route path="/movies" element={<MoviesList />} />
+          <Route path="/movies/create" element={<NewMovieScreen />} />
+          <Route path="/movies/edit" element={<EditMovieScreen />} />
+          <Route path="/movies/:id" element={<MovieDetailsScreen />} />
+          <Route path="*" element={<NotFoundScreen />} />
+        </Routes>
+      </BrowserRouter>
+    </SettingsProvider>
+  );
 }
 
-export default App
+export default App;
